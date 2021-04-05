@@ -21,8 +21,8 @@ svn co https://github.com/garypang13/luci-app-bypass/trunk ./luci-app-bypass
 svn co https://github.com/garypang13/luci-app-eqos/trunk ./luci-app-eqos
 svn co https://github.com/garypang13/luci-app-dnsfilter/trunk ./luci-app-dnsfilter
 svn co https://github.com/garypang13/luci-theme-edge/branches/18.06 ./luci-theme-edge
-git clone https://github.com/garypang13/smartdns-le
-git clone https://github.com/jerrykuku/luci-app-argon-config
+git clone https://github.com/garypang13/smartdns-le.git
+git clone https://github.com/jerrykuku/luci-app-argon-config.git
 svn co https://github.com/jerrykuku/lua-maxminddb/trunk ./lua-maxminddb
 svn co https://github.com/jerrykuku/luci-app-jd-dailybonus/trunk ./luci-app-jd-dailybonus
 svn co https://github.com/jerrykuku/luci-theme-argon/branches/18.06 ./luci-theme-argon
@@ -34,7 +34,7 @@ svn co https://github.com/xiaorouji/openwrt-passwall/trunk/naiveproxy
 svn co https://github.com/xiaorouji/openwrt-passwall/trunk/tcping
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-ddnsto
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-koolddns
-git clone https://github.com/sirpdboy/luci-app-advanced
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-advanced
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-ddnsto
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/microsocks
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2

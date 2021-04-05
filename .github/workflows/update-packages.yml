@@ -20,17 +20,17 @@ jobs:
     runs-on: ubuntu-18.04
     if: github.event.repository.owner.id == github.event.sender.id
 
-    name:更新 ${{matrix.target}}
+    name: Update ${{matrix.target}}
     strategy:
       fail-fast: false
       matrix:
         target: [LEDE,openwrt]
         
     steps:
-    - name: 检查
+    - name: Checkout
       uses: actions/checkout@main
 
-    - name: 初始化环境
+    - name: Initialization environment
       env:
         DEBIAN_FRONTEND: noninteractive
       run: |
@@ -40,7 +40,7 @@ jobs:
         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git config --global user.name "github-actions[bot]"
         
-    - name: 下载软件
+    - name: Clone packages
       run: |
         cd $GITHUB_WORKSPACE
         chmod +x ${{matrix.target}}.sh
@@ -50,7 +50,7 @@ jobs:
         git rm --cache *
         $GITHUB_WORKSPACE/${{matrix.target}}.sh
 
-    - name: 同步上传
+    - name: Upload
       env: 
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
@@ -58,7 +58,7 @@ jobs:
         [ -e $GITHUB_WORKSPACE/README.md ] && cp $GITHUB_WORKSPACE/README.md $GITHUB_WORKSPACE/${{matrix.target}}
         cd $GITHUB_WORKSPACE/${{matrix.target}}
         git add .
-        git commit -m "同步上游更新$(TZ='Asia/Shanghai' date +%Y%m%d)"
+        git commit -m "同步上游$(TZ='Asia/Shanghai' date +@%Y%m%d)"
         git push --quiet "https://${{ secrets.TOKEN }}@github.com/kenzok78/openwrt-packages.git" HEAD:${{matrix.target}}
  
 

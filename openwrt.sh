@@ -1,8 +1,10 @@
 #!/bin/bash
-svn co https://github.com/kenzok8/litte/trunk/adguardhome
+svn co https://github.com/Tencent-Cloud-Plugins/tencentcloud-openwrt-plugin-ddns/trunk/tencentcloud_ddns luci-app-tencentddns
+svn co https://github.com/immortalwrt/luci/trunk/applications/luci-app-adguardhome
+svn co https://github.com/openwrt/packages/trunk/net/shadowsocks-libev
 svn co https://github.com/kenzok8/litte/trunk/luci-app-aliddns
-svn co https://github.com/kenzok8/litte/trunk/gost
-svn co https://github.com/kenzok8/litte/trunk/luci-app-gost
+svn co https://github.com/immortalwrt/packages/trunk/net/gost
+svn co https://github.com/immortalwrt/luci/trunk/applications/luci-app-gost
 svn co https://github.com/kenzok8/litte/trunk/luci-app-smartdns
 svn co https://github.com/kenzok8/litte/trunk/smartdns
 svn co https://github.com/kenzok8/litte/trunk/luci-theme-argon_new
@@ -15,17 +17,17 @@ svn co https://github.com/frainzy1477/luci-app-clash/trunk ./luci-app-clash
 rm -rf luci-app-OpenClash
 rm -rf OpenClash
 git clone https://github.com/vernesong/OpenClash.git
-mv -f OpenClash/luci-app-openclash .
+mv -f OpenClash/luci-app-openclash
 rm -rf OpenClash
 svn co https://github.com/garypang13/luci-app-bypass/trunk ./luci-app-bypass
 svn co https://github.com/garypang13/luci-app-eqos/trunk ./luci-app-eqos
 svn co https://github.com/garypang13/luci-app-dnsfilter/trunk ./luci-app-dnsfilter
-svn co https://github.com/garypang13/luci-theme-edge/trunk ./luci-theme-edge
-git clone https://github.com/garypang13/smartdns-le.git
-git clone https://github.com/jerrykuku/luci-app-argon-config.git
-svn co https://github.com/jerrykuku/lua-maxminddb/trunk lua-maxminddb
+svn co https://github.com/garypang13/luci-theme-edge/branches/trunk ./luci-theme-edge
+git clone https://github.com/garypang13/smartdns-le
+git clone https://github.com/jerrykuku/luci-app-argon-config
+svn co https://github.com/jerrykuku/lua-maxminddb/trunk ./lua-maxminddb
 svn co https://github.com/jerrykuku/luci-app-jd-dailybonus/trunk ./luci-app-jd-dailybonus
-svn co https://github.com/jerrykuku/luci-theme-argon/trunk ./luci-theme-argon
+svn co https://github.com/jerrykuku/luci-theme-argon/branches/trunk ./luci-theme-argon
 svn co https://github.com/jerrykuku/luci-app-vssr/trunk ./luci-app-vssr
 svn co https://github.com/tty228/luci-app-serverchan/trunk ./luci-app-serverchan
 svn co https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus
@@ -34,7 +36,7 @@ svn co https://github.com/xiaorouji/openwrt-passwall/trunk/naiveproxy
 svn co https://github.com/xiaorouji/openwrt-passwall/trunk/tcping
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-ddnsto
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-koolddns
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-advanced
+git clone https://github.com/sirpdboy/luci-app-advanced
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-ddnsto
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/microsocks
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/redsocks2
@@ -46,4 +48,5 @@ rm -rf ./*/.git
 rm -rf ./*/.svn 
 rm -f .gitattributes .gitignore
 exit 0
+
 

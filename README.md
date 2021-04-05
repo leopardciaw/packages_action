@@ -8,11 +8,9 @@
 <img src="https://img.shields.io/github/languages/code-size/BlueskyClouds/My-Actions?color=blueviolet">
 </div>
 =
-==================================================
-
 Welcome to kenzo's  git source of packages
 -
-[kenzo のpackage 常用插件](https://github.com/kenzok78/openwrt-packages)
+[kenzo  常用插件](https://github.com/kenzok78/openwrt-packages)
 ==================================================
 
 #### openwrt-packages
@@ -28,7 +26,7 @@ Welcome to kenzo's  git source of packages
 *  官方源码用19.07分支
 
 
-#### 更新日志
+##### 更新日志
 
 
 
